@@ -10,7 +10,7 @@ data:
   #######################
 
   # server host name
-  server.host: drone.example.com
+  server.host: "http://a25b29a029a2e11e891d4022f25edb64-1076210333.ap-northeast-2.elb.amazonaws.com"
   # start the server in debug mode
   server.debug: "true"
   # open user registration
@@ -24,8 +24,8 @@ data:
 
   # remote parameters (GitHub)
   server.remote.github: "true"
-  server.remote.github.client: xxxxx
-  server.remote.github.secret: xxxxx
+  server.remote.github.client: b50a70b0f0d4d218895b
+  server.remote.github.secret: 3afdc41acb5c05a4e0f4146c97c64e78cd2608da
 
   # remote parameters (Gitea)
   server.remote.gitea: "false"

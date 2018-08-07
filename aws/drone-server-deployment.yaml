@@ -21,8 +21,8 @@ spec:
           protocol: TCP
         volumeMounts:
           # Persist our configs in an SQLite DB in here
-          - name: drone-server-sqlite-db
-            mountPath: /var/lib/drone
+#          - name: drone-server-sqlite-db
+#            mountPath: /var/lib/drone
           # Enables Docker in Docker
           - name: docker-socket
             mountPath: /var/run/docker.sock
@@ -98,13 +98,13 @@ spec:
               key: server.debug
 
       volumes:
-        - name: drone-server-sqlite-db
-          awsElasticBlockStore:
-            fsType: ext4
+        #- name: drone-server-sqlite-db
+        #  awsElasticBlockStore:
+        #    fsType: ext4
             # NOTE: This needs to be pointed at a volume in the same AZ.
             # You need not format it beforehand, but it must already exist.
             # CHANGEME: Substitute your own EBS volume ID here.
-            volumeID: vol-xxxxxxxxxxxxxxxxx
+        #    volumeID: vol-0917456b6ff45e58d
         - name: docker-socket
           hostPath:
             path: /var/run/docker.sock
