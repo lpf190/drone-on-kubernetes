@@ -10,17 +10,19 @@ data:
   #######################
 
   # server host name
-  server.host: "http://a25b29a029a2e11e891d4022f25edb64-1076210333.ap-northeast-2.elb.amazonaws.com"
+  server.host: "http://a01228e149aee11e891d4022f25edb64-820910390.ap-northeast-2.elb.amazonaws.com"
   # start the server in debug mode
   server.debug: "true"
   # open user registration
   server.open: "true"
   # database driver, defaul as sqlite3
-  server.database.driver: sqlite3
+  #server.database.driver: sqlite3
+  server.database.driver: mysql
   # database driver configuration string
-  server.database.datasource: drone.sqlite
+  #server.database.datasource: drone.sqlite
+  server.database.datasource: admin:123456@tcp(172.20.60.79:3306)/drone?parseTime=true
   # list of admin users
-  server.admin: appleboy
+  server.admin: Andy
 
   # remote parameters (GitHub)
   server.remote.github: "true"
